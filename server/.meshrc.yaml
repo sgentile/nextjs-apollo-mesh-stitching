@@ -1,0 +1,19 @@
+# documents:
+#   - ./graphql/**/*.{gql,graphql}
+
+sources:
+  # - name: posts
+  #   handler:
+  #     graphql:
+  #       endpoint: http://localhost:4000/graphql
+  # - name: ContractService
+  #   handler:
+  #     graphql:
+  #       endpoint: http://localhost:3000/api/graphql
+  - name: techsuite
+    handler:
+      graphql:
+        endpoint: http://localhost:9000/api
+
+require:
+  - ts-node/register/transpile-only

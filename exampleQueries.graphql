@@ -1,0 +1,54 @@
+# Write your query or mutation here
+query organizations {
+  organizations {
+    id
+    name
+  }
+}
+
+mutation createOrganization {
+  createOrganization(data: { name: "Mile Two" }) {
+    id
+  }
+}
+
+query posts {
+  posts {
+    id
+    title
+    user {
+      id
+      name
+    }
+  }
+}
+
+query users {
+  users {
+    id
+    name
+  }
+}
+
+mutation createUser {
+  createUser(input: { name: "Steve Gentile" }) {
+    id
+    name
+  }
+}
+
+mutation deleteUser {
+  deleteUser(id: "2") {
+    id
+    name
+  }
+}
+
+mutation createPost {
+  createPost(
+    input: { title: "Welcome", content: "This is an example post", userId: 1 }
+  ) {
+    id
+    title
+  }
+}
